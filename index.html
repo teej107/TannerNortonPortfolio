@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+<head>
+    <meta charset="UTF-8">
+    <title>Tanner Norton</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+<div id="main" ng-controller="mainCtrl">
+    <div id="portfolio-card">
+        <div id="front">
+            <div id="left">
+                <div id="title">
+                    <img class="clickable" src="images/falling teej.jpg">
+                    <h1>Tanner Norton</h1>
+                </div>
+                <hr>
+                <div id="contacts">
+                    <img-link src="images/linkedin.svg" title="Linkedin"
+                              ng-href="{{ linkedin }}"></img-link>
+                    <img-link src="images/github.svg" title="GitHub" ng-href="{{ github }}"
+                              color="#666"></img-link>
+                    <img-link src="images/mail.svg" title="Contact" href="mailto:teej107@gmail.com"></img-link>
+                </div>
+            </div>
+            <div id="right">
+                <h2>Software Developer</h2>
+                <p class="ng-cloak">Good {{ time }}! I'm Tanner Norton and I'm a web/software developer located in the
+                    Salt Lake valley. </p>
+                <p>Please have a look around my interactive "business card". You may also check out my <a
+                        ng-href="{{ github }}">GitHub</a> and
+                    <a ng-href="{{ linkedin }}">LinkedIn</a> profile. A list of my projects are found on the back side of this card. Click the <span><img
+                            src="images/flip.svg"/></span> icon to flip over the card.</p>
+                <img class="otherside" src="images/flip.svg"/>
+            </div>
+        </div>
+        <div id="back">
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/angular1.6.4-min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controller/mainCtrl.js"></script>
+<script src="app/directive/img-link/img-link.js"></script>
+</body>
+</html>

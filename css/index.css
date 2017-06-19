@@ -1,0 +1,122 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Arial;
+  color: #4b4b4b;
+  overflow: hidden; }
+
+p {
+  line-height: 1.5; }
+  p img {
+    height: 16px;
+    cursor: text; }
+
+a {
+  text-decoration: none; }
+
+#main {
+  height: inherit;
+  width: inherit;
+  background-image: url("../images/bg.jpg"); }
+
+#portfolio-card {
+  background-color: #f5f9ef;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+  height: 400px;
+  width: 700px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation: start 1s;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out; }
+  #portfolio-card > div {
+    backface-visibility: hidden;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0; }
+
+#back {
+  transform: rotateY(180deg); }
+
+#portfolio-card.flipped {
+  transform: rotateY(180deg);
+  box-shadow: -3px 3px 3px 3px rgba(0, 0, 0, 0.3); }
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  width: 100%; }
+  #title img {
+    max-height: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid darkgray; }
+  #title h1 {
+    font-size: 40px; }
+
+#contacts {
+  display: flex;
+  justify-content: space-around; }
+
+#left {
+  width: 340px; }
+
+#right {
+  flex: 1;
+  padding-left: 30px; }
+
+.otherside {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  height: 40px; }
+
+.img-link {
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px; }
+  .img-link img {
+    height: 100%; }
+  .img-link p {
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
+    vertical-align: top;
+    line-height: 32px; }
+
+h2 {
+  margin: 5px 0;
+  font-size: 25px;
+  color: darkgray;
+  text-align: center; }
+
+hr {
+  margin: 20px 0; }
+
+.titleimg-focus {
+  transform: scale(6); }
+
+.clickable, .otherside {
+  cursor: pointer; }
+
+@keyframes start {
+  0% {
+    top: -150%;
+    transform: rotateX(90deg) rotateY(-90deg); }
+  95% {
+    transform: rotateX(0); }
+  100% {
+    top: 0; } }
+
+/*# sourceMappingURL=index.css.map */
