@@ -7,7 +7,7 @@ app.directive('slideshow', function ()
         restrict: 'E',
         templateUrl: 'app/directive/slideshow/slideshow.html',
         scope: {},
-        controller: function ($scope)
+        controller: ['$scope' ,function ($scope)
         {
             var slides = slidesArray;
             var index = 0;
@@ -27,6 +27,6 @@ app.directive('slideshow', function ()
             {
                 return slides[index];
             }
-        }
+        }]
     };
 });

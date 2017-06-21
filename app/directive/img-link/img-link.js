@@ -9,9 +9,9 @@ app.directive("imgLink", function ()
             href: '@',
             color: '@'
         },
-        controller: function ($scope)
+        controller: ['$scope' ,function ($scope)
         {
             $scope.color = { color: ($scope.color ? $scope.color : 'black')};
-        }
+        }]
     }
 });

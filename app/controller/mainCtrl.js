@@ -1,7 +1,7 @@
 /**
  * Created by Tanner Norton on 6/16/2017.
  */
-app.controller('mainCtrl', function ($scope, $timeout)
+app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout)
 {
     var card = $('#portfolio-card');
     $('.otherside').on('click', function ()
@@ -31,4 +31,4 @@ app.controller('mainCtrl', function ($scope, $timeout)
     {
         $('a').attr('target', '_blank');
     }, 10);
-});
+}]);
