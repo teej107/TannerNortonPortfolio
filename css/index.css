@@ -18,6 +18,7 @@ a {
 #main {
   height: inherit;
   width: inherit;
+  background: radial-gradient(ellipse closest-corner at center, #DDB486 0%, #754018 100%);
   background-image: url("../images/bg.jpg"); }
 
 #portfolio-card {
