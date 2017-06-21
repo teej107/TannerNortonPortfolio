@@ -1,6 +1,7 @@
 $shadow-color: rgba(0, 0, 0, 0.3)
 $ink: rgb(75, 75, 75)
-
+$card-background-color: #f5f9ef
+$dark-bg: rgba(0, 0, 0, 0.4)
 
 html, body
   height: 100%
@@ -25,7 +26,6 @@ a
   background-image: url("../images/bg.jpg")
 
 #portfolio-card
-  background-color: #f5f9ef
   box-shadow: 3px 3px 3px 3px $shadow-color
   height: 400px
   width: 700px
@@ -42,6 +42,7 @@ a
 
   & > div
     backface-visibility: hidden
+    background-color: $card-background-color
     display: flex
     width: 100%
     height: 100%
@@ -64,20 +65,24 @@ a
   height: 55px
   width: 100%
 
-  & img
-    max-height: 100%
+  img
     height: 100%
     box-sizing: border-box
     border: 1px solid darkgray
 
-  & h1
+  h1
     font-size: 40px
+    height: 100%
 
 #contacts
   display: flex
+  flex-direction: column
   justify-content: space-around
+  flex: 1
 
 #left
+  display: flex
+  flex-direction: column
   width: 340px
 
 #right
@@ -90,18 +95,23 @@ a
   bottom: 0
   right: 5px
   height: 40px
+  z-index: 100
 
 .img-link
-  $height: 32px
-  display: inline-block
+  $height: 64px
+  display: block
   vertical-align: middle
   height: $height
+  padding: 12px
+  padding-left: 50px
+  border: 1px dashed darkgray
+  background-color: $card-background-color
 
   img
     height: 100%
 
   p
-    display: inline-block
+    display: inline
     font-size: 16px
     margin: 0
     vertical-align: top
@@ -111,7 +121,7 @@ h2
   margin: 5px 0
   font-size: 25px
   color: darkgray
-  text-align: center
+  text-align: right
 
 hr
   margin: 20px 0
@@ -121,6 +131,47 @@ hr
 
 .clickable
   cursor: pointer
+
+#slideshow
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  display: flex
+
+  div
+    flex: 1
+    background-size: cover
+    background-position: center center
+
+  h1
+    margin: 0
+    padding: 15px 0
+    font-size: 36px
+    text-align: center
+    color: white
+    background-color: $dark-bg
+    text-shadow: 2px 2px $ink
+
+  p
+    font-size: 16px
+    color: white
+    margin: 0
+    padding: 0 20px
+    background-color: $dark-bg
+    text-shadow: 1px 1px $ink
+
+  .arrow
+    height: 75px
+    width: 75px
+    margin: auto 0
+    border-radius: 100%
+
+    &:hover
+      background-color: white
+    &.left
+      transform: scaleX(-1)
 
 @keyframes start
   0%

@@ -1,0 +1,8 @@
+<div id="slideshow">
+    <img src="images/arrow.svg" class="arrow left" ng-click="arrowClick(-1)"/>
+    <div ng-style="current().style">
+        <h1>{{ current().title }}</h1>
+        <p>{{ current().paragraph }}</p>
+    </div>
+    <img src="images/arrow.svg" class="arrow right" ng-click="arrowClick(1)"/>
+</div>
